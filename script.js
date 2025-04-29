@@ -81,7 +81,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 
 // ---------------------- GEOJSON ZONES ----------------------
 let nycOpenDataLayer;
-fetch('/data/nyc-opendata.geojson')
+fetch('data/nyc-opendata.geojson')
   .then(res => {
     if (!res.ok) throw new Error("Fetch failed: " + res.status + " " + res.statusText);
     return res.json();
@@ -124,7 +124,7 @@ function updateProgress(percent) {
 }
 
 // Load the initial truck data
-fetch('/data/every_industry.json')
+fetch('data/every_industry.json')
   .then(res => res.json())
   .then(data => {
     updateProgress(66);
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateMap();                // force 12:00 am on screen
 
     currentIndustry = +e.target.value;
-    const path = currentIndustry === 0 ? '/data/every_industry.json' : `/data/industry_minute_tables/${currentIndustry}.json`;
+    const path = currentIndustry === 0 ? 'data/every_industry.json' : `data/industry_minute_tables/${currentIndustry}.json`;
     fetch(path)
       .then(res => res.json())
       .then(data => {
