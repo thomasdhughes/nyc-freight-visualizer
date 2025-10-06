@@ -1,6 +1,6 @@
 **Steel Arteries: Visualizing Freight Flows in New York City**
 
-Live at https://thomasinch.github.io/nyc-freight-visualizer/
+Live at https://thomasdhughes.github.io/nyc-freight-visualizer/
 
 How it works and why I made it: https://infrastructure.bearblog.dev/steel-arteries/
 
